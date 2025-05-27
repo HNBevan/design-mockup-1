@@ -1,0 +1,309 @@
+ <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>GreenScape Landscaping</title>
+        <link rel="stylesheet" href="css/styles.css">
+      </head>
+      <body>
+
+
+
+      
+        <!-- Header / Nav -->
+        <header class="site-header">
+      
+          <button class="menu-toggle" aria-label="Open menu">
+            &#9776;
+          </button>
+
+          
+         
+          
+         <nav class="site-nav">
+              <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Plant Hire</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+         
+        </header>
+      
+        <!-- Hero -->
+        <div class="hero-wrapper">
+          <div class="hero-logo">
+            <img src="images/fakelogo.png">
+          </div>
+
+        <section class="hero">
+
+          
+          <div class="hero-content container">
+            <h1>Landscaping &amp; Groundwork Services</h1>
+            <a href="#contact" class="btn btn-primary">Get in Touch</a>
+          </div>
+        </section>
+      
+        <!-- About / Feature -->
+
+        <section class="about-full">
+        
+           
+          <div class="about-text">
+            <h1>About us</h1>
+            <p>We’re a full service landscaping and groundworks company, dedicated to creating beautiful, 
+              functional outdoor spaces for both residential and commercial clients. From garden design and planting to paving, 
+              drainage, and site preparation, our experienced team handles every project with precision and care. To make earthmoving easier, 
+              we also offer digger and dumper hire from our modern, well maintained fleet perfect for DIY enthusiasts and trade professionals alike. 
+              Whatever your vision, we’ve got the skills and equipment to bring it to life on time and on budget.</p>
+          </div>
+        
+          <!-- 30% image column (background on this container) -->
+          <div
+            class="about-feature"
+            style="background-image: url('images/Dumper-Digger.png');"
+          >
+            <div class="feature-overlay">
+              <h3 class="plant-hire-header">Plant Hire</h3>
+              <a href="#enquire" class="btn">Enquire Here</a>
+            </div>
+          </div>
+        
+        </section>
+        
+
+       
+        
+         
+       
+        <!-- Recent Projects Slider -->
+        <section class="projects container">
+          <h2>Recent Projects</h2>
+          <div class="slider">
+            <button class="slider-btn prev">&larr;</button>
+        
+            <div class="slides">
+              <div class="slide">
+                <img src="images/slider image1.png" alt="Full Garden Project">
+                <div class="slide-caption">Full Garden Project</div>
+              </div>
+              <div class="slide">
+                <img src="images/slider image2.png" alt="Patio Transformation"en>
+                <div class="slide-caption">Patio Transformation</div>
+              </div>
+              <!-- add more slides here -->
+            </div>
+        
+            <button class="slider-btn next">&rarr;</button>
+          </div>
+          <a href="#" class="btn btn-primary view-more">View More Projects</a>
+        </section>
+
+       <!-- Lightbox overlay -->
+      <div id="lightbox" class="lightbox">
+        <button class="lightbox-nav prev">&larr;</button>
+        <img class="lightbox-img" src="" alt="Enlarged project image">
+        <button class="lightbox-nav next">&rarr;</button>
+        <span class="lightbox-close">&times;</span>
+      </div>
+
+      <section class="services-container">
+        <h2 class="service-header">Services</h2>
+        <div class="service-list">
+          <div class="service-item landscaping">
+            <img src="images/landscaping-icon.png" alt="Landscaping icon">
+            <h3>Landscaping</h3>
+            <p class="service-text">
+              We transform outdoor spaces with expert garden design, planting, turfing, 
+              and hardscaping tailoring every project to suit your style and budget. 
+              Our skilled team delivers reliable, high-quality workmanship from start to finish.</p>
+          </div>
+          <div class="service-item groundworks">
+            <img src="images/digger-icon.png" alt="Groundworks icon">
+            <h3>Groundworks</h3>
+            <p class="service-text">
+              We prepare sites for construction and landscaping with expert excavation, 
+              drainage, foundations, and groundwork services ensuring a solid, reliable base for any project, big or small.
+            </p>
+          </div>
+          <div class="service-item plant-hire">
+            <img src="images/dumper-icon.png" alt="Plant Hire icon">
+            <h3>Plant Hire</h3>
+            <p class="service-text">
+              We offer flexible plant hire with diggers &amp; dumpers, and access equipment 
+              available for short or long term hire, complete with delivery, collection, and optional operator service.
+          </div>
+        </div>
+      </section>
+
+       <div class="bottom-text">
+        <h1>and all general garden work...</h1>
+        <p>Any quesions or for a free no obligation quote, please don't hesistate to get in touch.</p>
+        <a href="#contact" class="btn btn-primary">Contact Us</a>
+       </div>
+      
+
+
+
+
+
+
+
+ 
+        
+       
+      
+        
+        <!-- Footer -->
+        <footer class="site-footer">
+          <div class="container footer-inner">
+            <div class="contact-info">
+              <span class="phone"><img src="images/phone.svg" alt="Phone"> 00000000000</span>
+              <span class="email"><img src="images/mail.svg" alt="Email"> youremail@domain.co.uk</span>
+            </div>
+          </div>
+        </footer>
+      
+        <script src="js/script.js" defer></script>
+      </body>
+      </html>
+
+
+
+
+
+      <script>
+        document.addEventListener('DOMContentLoaded', () => {
+  const slider        = document.querySelector('.slider');
+  const slidesWrapper = slider.querySelector('.slides');
+  const slides        = slider.querySelectorAll('.slide');
+  const prevBtn       = slider.querySelector('.prev');
+  const nextBtn       = slider.querySelector('.next');
+  let idx = 0;
+
+  function updateSlider() {
+    const slideWidth = slider.clientWidth;
+    slidesWrapper.style.transform = `translateX(-${idx * slideWidth}px)`;
+  }
+
+  prevBtn.addEventListener('click', () => {
+    idx = (idx > 0 ? idx - 1 : slides.length - 1);
+    updateSlider();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    idx = (idx + 1) % slides.length;
+    updateSlider();
+  });
+
+  // Keep it responsive on resize:
+  window.addEventListener('resize', updateSlider);
+
+  // Initialize
+  updateSlider();
+});
+
+
+    // Lightbox
+const lightbox      = document.getElementById('lightbox');
+const lightboxImg   = lightbox.querySelector('.lightbox-img');
+const lightboxClose = lightbox.querySelector('.lightbox-close');
+
+// Open on slide image click
+document.querySelectorAll('.slide img').forEach(img => {
+  img.addEventListener('click', () => {
+    lightboxImg.src = img.src;
+    lightbox.classList.add('open');
+  });
+});
+
+// Close handlers
+lightboxClose.addEventListener('click', () => {
+  lightbox.classList.remove('open');
+});
+lightbox.addEventListener('click', e => {
+  if (e.target === lightbox) lightbox.classList.remove('open');
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  // grab all the slide images into an array
+  const slideImages = Array.from(document.querySelectorAll('.slide img'));
+  let currentIndex = 0;
+
+  const lightbox      = document.getElementById('lightbox');
+  const lightboxImg   = lightbox.querySelector('.lightbox-img');
+  const lightboxClose = lightbox.querySelector('.lightbox-close');
+  const prevBtn       = lightbox.querySelector('.lightbox-nav.prev');
+  const nextBtn       = lightbox.querySelector('.lightbox-nav.next');
+
+  // open lightbox when a slide image is clicked
+  slideImages.forEach((img, idx) => {
+    img.addEventListener('click', () => {
+      currentIndex = idx;
+      lightboxImg.src = img.src;
+      lightbox.classList.add('open');
+    });
+  });
+
+  // close handlers
+  lightboxClose.addEventListener('click', () => lightbox.classList.remove('open'));
+  lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) lightbox.classList.remove('open');
+  });
+
+  // navigate to previous image
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + slideImages.length) % slideImages.length;
+    lightboxImg.src = slideImages[currentIndex].src;
+  });
+
+  // navigate to next image
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % slideImages.length;
+    lightboxImg.src = slideImages[currentIndex].src;
+  });
+});
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.menu-toggle');
+  const nav    = document.querySelector('.site-nav');
+
+  // Open/close menu on click
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    nav.classList.toggle('open');
+  });
+
+  // Close menu when clicking a link
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+    });
+  });
+
+  // Close if clicking outside
+  document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+      nav.classList.remove('open');
+    }
+  });
+});
+
+
+      </script>
+
+
+      
+      
+    </body>
+
+</html>
