@@ -1,0 +1,128 @@
+ <!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Our Services</title>
+        <link rel="stylesheet" href="css/styles.css">
+      </head>
+      <body>
+
+
+
+      
+        <!-- Header / Nav -->
+        <header class="site-header">
+      
+          <button class="menu-toggle" aria-label="Open menu">
+            &#9776;
+          </button>
+
+          
+         
+          
+         <nav class="site-nav">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Plant Hire</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </nav>
+         
+        </header>
+      
+        <!-- Hero -->
+        <div class="hero-wrapper">
+          <div class="hero-logo">
+            <img src="images/fakelogo.png">
+          </div>
+
+        <section class="hero-services">
+
+          
+          <div class="hero-content container">
+            <h1 class="main-service-heading">Our Services in Kent</h1>
+            <h2>Proudly Serving, Maidstone, Canterbury, Ashford, Sevenoaks, Tunbridge Wells &amp; Surrounding Areas </h2>
+          </div>
+        </section>
+
+        <div class="about-text-services">
+            <h2 class="service-header">Our Services</h2>
+            <p class="service-text">We provide comprehensive landscaping, groundworks, and plant hire services across Kent and the surrounding areas. Whether you need garden design 
+                and planting, driveway or patio installation, drainage and site prepration, or short and long term hire of diggers and dumpers, our skilled team and modern
+                fleet have you covered. From intial consulation through to final inspection, we deliver reliable, high quality results on time and within budget.
+            </p>
+        </div>
+
+         <section class="services-container">
+       
+        <div class="service-list">
+          <div class="service-item landscaping">
+             <h3 class="inside-service-head">Landscaping</h3>
+           
+            <img src="images/landscaping-icon.png" alt="Landscaping icon">
+           
+          </div>
+          <div class="service-item groundworks">
+            <h3 class="inside-service-head">Groundworks</h3>
+            <img src="images/digger-icon.png" alt="Groundworks icon">
+            
+            
+           
+          </div>
+          <div class="service-item plant-hire">
+            <h3 class="inside-service-head">Plant Hire</h3>
+            <img src="images/dumper-icon.png" alt="Plant Hire icon">
+            
+           
+          </div>
+        </div>
+      </section>
+
+       <div class="bottom-text">
+         <p>Any quesions or for a free no obligation quote, please don't hesistate to get in touch.</p>
+        <a href="#contact" class="btn btn-primary">Contact Us</a>
+       </div>
+
+
+          <footer class="site-footer">
+          <div class="container footer-inner">
+            <div class="contact-info">
+              <span class="phone"><img src="images/phone.svg" alt="Phone"> 00000000000</span>
+              <span class="email"><img src="images/mail.svg" alt="Email"> youremail@domain.co.uk</span>
+            </div>
+          </div>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.menu-toggle');
+  const nav    = document.querySelector('.site-nav');
+
+  // Open/close menu on click
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    nav.classList.toggle('open');
+  });
+
+  // Close menu when clicking a link
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+    });
+  });
+
+  // Close if clicking outside
+  document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+      nav.classList.remove('open');
+    }
+  });
+});
+        </script>
+
+    </body>
+
+    </html>
