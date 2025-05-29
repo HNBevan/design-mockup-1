@@ -13,6 +13,7 @@
       
         <!-- Header / Nav -->
         <header class="site-header">
+          
       
           <button class="menu-toggle" aria-label="Open menu">
             &#9776;
@@ -35,16 +36,18 @@
       
         <!-- Hero -->
         <div class="hero-wrapper">
-          <div class="hero-logo">
-            <img src="images/fakelogo.png">
-          </div>
+          <a href="index.html" class="hero-logo">
+        <img src="images/fakelogo.png" alt="GreenScape Logo">
+          </a>
+
 
         <section class="hero">
 
           
           <div class="hero-content container">
-            <h1>Landscaping &amp; Groundwork Services</h1>
-            <a href="#contact" class="btn btn-primary">Get in Touch</a>
+            <h1 class="main-service-heading">GreenScapes </h1>
+            <h2>Landscaping &amp; Groundwork Services </h2>
+            <a href="#contact" class="btn-btn-primary">Get in Touch</a>
           </div>
         </section>
       
@@ -111,34 +114,41 @@
         <span class="lightbox-close">&times;</span>
       </div>
 
-      <section class="services-container">
-        <h2 class="service-header">Services</h2>
-        <div class="service-list">
-          <div class="service-item landscaping">
-            <img src="images/landscaping-icon.png" alt="Landscaping icon">
-            <h3>Landscaping</h3>
-            <p class="service-text">
-              We transform outdoor spaces with expert garden design, planting, turfing, 
-              and hardscaping tailoring every project to suit your style and budget. 
-              Our skilled team delivers reliable, high-quality workmanship from start to finish.</p>
-          </div>
-          <div class="service-item groundworks">
-            <img src="images/digger-icon.png" alt="Groundworks icon">
-            <h3>Groundworks</h3>
-            <p class="service-text">
-              We prepare sites for construction and landscaping with expert excavation, 
-              drainage, foundations, and groundwork services ensuring a solid, reliable base for any project, big or small.
-            </p>
-          </div>
-          <div class="service-item plant-hire">
-            <img src="images/dumper-icon.png" alt="Plant Hire icon">
-            <h3>Plant Hire</h3>
-            <p class="service-text">
-              We offer flexible plant hire with diggers &amp; dumpers, and access equipment 
-              available for short or long term hire, complete with delivery, collection, and optional operator service.
-          </div>
-        </div>
-      </section>
+     <section class="services-container">
+  <h2 class="service-header">Services</h2>
+  <div class="service-list">
+
+    <a href="landscaping.html" class="service-item landscaping">
+      <img src="images/landscaping-icon.png" alt="Landscaping icon">
+      <h3>Landscaping</h3>
+      <p class="service-text">
+        We transform outdoor spaces with expert garden design, planting, turfing, 
+        and hardscaping tailoring every project to suit your style and budget. 
+        Our skilled team delivers reliable, high-quality workmanship from start to finish.
+      </p>
+    </a>
+
+    <a href="groundworks.html" class="service-item groundworks">
+      <img src="images/digger-icon.png" alt="Groundworks icon">
+      <h3>Groundworks</h3>
+      <p class="service-text">
+        We prepare sites for construction and landscaping with expert excavation, 
+        drainage, foundations, and groundwork services ensuring a solid, reliable base for any project, big or small.
+      </p>
+    </a>
+
+    <a href="plant-hire.html" class="service-item plant-hire">
+      <img src="images/dumper-icon.png" alt="Plant Hire icon">
+      <h3>Plant Hire</h3>
+      <p class="service-text">
+        We offer flexible plant hire with diggers &amp; dumpers, and access equipment 
+        available for short or long term hire, complete with delivery, collection, and optional operator service.
+      </p>
+    </a>
+
+  </div>
+</section>
+
 
        <div class="bottom-text">
         <h1>and all general garden work...</h1>
@@ -273,6 +283,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const toggle = document.querySelector('.menu-toggle');
   const nav    = document.querySelector('.site-nav');
@@ -297,6 +309,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
 
 
       </script>
