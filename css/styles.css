@@ -49,6 +49,7 @@ de the hamburger on desktop --- */
   border: none;
   font-size: 20px;
   cursor: pointer;
+
   
 
 }
@@ -59,6 +60,7 @@ de the hamburger on desktop --- */
   position: static;        /* normal flow */
   transform: none;
   transition: none;
+
 }
 
 /* Mobile (≤768px) */
@@ -86,6 +88,15 @@ de the hamburger on desktop --- */
   /* slide it into view when open */
   .site-nav.open {
     transform: translateX(0);
+    background-color: #ffffffc1;
+    height:100vh;
+    text-align: right;
+    width: 100%;
+    margin-left: 85px;
+    border-radius: 8px;
+    font-size: 25px;
+    
+   
   }
 
   /* stack links vertically */
@@ -96,6 +107,7 @@ de the hamburger on desktop --- */
     margin: 0;
     padding: 0;
     list-style: none;
+    
   }
 
   .site-nav a {
@@ -294,13 +306,15 @@ de the hamburger on desktop --- */
 
 }
 
+
+
 @media (max-width:1048px) {
   .hero-content {
-    top:10%;
+    top:3%;
   }
 }
 
-.hero h1 { font-size: 50px; margin-bottom: 20px; }
+.hero h1 { font-size: 50px; margin-bottom: 10px; }
 
 /* About */
 .about {
@@ -437,8 +451,11 @@ de the hamburger on desktop --- */
 }
 
 .lightbox-img {
-  max-width: 90%;
-  max-height: 90%;
+  max-width: auto;
+  max-height: auto;
+  border-radius: 8px;
+  
+
 }
 
 .lightbox-close {
@@ -782,6 +799,7 @@ de the hamburger on desktop --- */
 }
 
 
+
 .inside-service-head {
   padding: 30px;
  
@@ -837,13 +855,17 @@ de the hamburger on desktop --- */
 
 @media (max-width: 1024px) {
   .main-service-heading {
-    font-size: 30px;
+    font-size: 40px;
+   
+   
     
   }
 
   .btn-btn-primary {
-    margin-top: -20px;
+    margin-top: -30px;
   }
+
+ 
 
 
 
@@ -931,22 +953,49 @@ de the hamburger on desktop --- */
 
   }
 
+  .main-service-heading, h1 {
+    font-size: 35px;
+    line-height: 50px;
+    margin-top: 5px;
+    padding-left: 2px;
+    padding-right: 2px;
+   
+   
+    
+  }
+
+
   /* Hero */
   .hero {
     height: 280px;
     border-radius: 6px;
   }
   .hero h1 {
-    font-size: 2rem;
+    font-size: 40px;
+   
+    line-height: 1px;
+   
   }
   .hero-content {
-    margin-top: 30px;
+    margin-top:80px;
+    padding: 1px;
+    font-size: 12px;
+
+    
   }
+
+  .hero-services {
+    height: 400px;
+    border-radius: 6px;
+  }
+  
 
   .about-text,
   .about-feature {
     width: auto;
   }
+
+
 
   /* Stack About vertically */
   .about-full {
