@@ -643,16 +643,17 @@ de the hamburger on desktop --- */
   width:115px;
   height: 115px;
   margin-bottom: 50px;
-  margin-top: -60px;
+  margin-top: -20px;
   padding: 0;
   
   
 }
 
 .service-item-page.landscaping{ 
-  background-color: hsl(72, 78%, 21%); 
+  background: hsl(72, 78%, 21%); 
   color: #000000; 
   font-size: 20px;
+  
   } 
 
 .service-item-page.groundwork
@@ -678,15 +679,19 @@ de the hamburger on desktop --- */
 
 }
 
-.service-images img {
-  width: 400px;
-  height: 200px;
-  margin: 20px;
-  border-radius: 8px;
-  object-fit: cover;
-  
+
+.service-tag {
+  margin-top: -65px;
+  font-style: italic;
+  font-size: 14px;
 }
 
+.service-info {
+  margin-top:-25px;
+  background-color:#b3d200;
+  padding: 2px 2px;
+  border-radius: 5px;
+}
 
 
 @media (max-width:1024px) {
