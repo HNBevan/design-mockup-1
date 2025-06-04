@@ -63,55 +63,50 @@ de the hamburger on desktop --- */
 
 }
 
-/* Mobile (≤768px) */
+/* ───────────────────────────────────────────────── */
+/* Mobile off-canvas nav (≤768px)                   */
+/* ───────────────────────────────────────────────── */
 @media (max-width: 768px) {
-  /* show the burger */
+  /* Show the burger */
   .menu-toggle {
     display: block;
     z-index: 1100;
   }
 
-  /* hide desktop nav by default */
+  /* Off-canvas panel, hidden off to the right */
   .site-nav {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 80%;
-  max-width: 300px;
-  background: #fff;
-  transform: translateX(100%);          /* fully off-screen */
-  transition: transform 0.3s ease-in-out;/* ← animate transforms */
-  z-index: 1050;
-}
-
-  /* slide it into view when open */
-  .site-nav.open {
-    transform: translateX(0);
-    background-color: #ffffffc1;
-    height:100vh;
-    text-align: right;
-    width: 100%;
-    margin-left: 85px;
-    border-radius: 8px;
-    font-size: 25px;
-    
-   
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 80%;                /* adjust to taste */
+    max-width: 300px;          /* optional cap */
+    background: #fff;
+    box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+    transform: translateX(100%);  /* start off-screen */
+    transition: transform 0.3s ease-in-out;
+    display: flex;               /* ensure it can flex its contents */
+    flex-direction: column;
+    padding: 2rem 1rem;
+    z-index: 1050;
   }
 
-  /* stack links vertically */
+  /* Slide into view when .open is applied */
+  .site-nav.open {
+    transform: translateX(0);
+  }
+
+  /* Stack links vertically */
   .site-nav ul {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+    list-style: none;
     margin: 0;
     padding: 0;
-    list-style: none;
-    
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
   }
 
   .site-nav a {
-    display: block;
     color: #000;
     text-decoration: none;
     font-weight: 500;
@@ -137,45 +132,6 @@ de the hamburger on desktop --- */
   display: flex;
 }
 
-/* --- Tablet & Mobile (≤ 768px) --- */
-@media (max-width: 768px) {
-  /* show the hamburger */
-  .menu-toggle {
-    display: block;
-   
-  }
-
-
-  .site-nav {
-    display: none;
-    position: absolute;
-    top: 100%;      
-    left: 0;
-    width: 100%;
-    background: rgb(255, 255, 255);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  
-  }
-  .site-nav.open {
-    display: block;
-  }
-
-  .site-nav ul {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 30px;
-  }
-
- 
-  .site-nav a {
-    display: block;
-    width: 100%;
-    padding: .5rem 0;
-  }
-
-  
-  }
 
   
 
@@ -641,8 +597,8 @@ de the hamburger on desktop --- */
 /* Title */
 .service-item h3 {
   margin: 0;
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
+  margin-bottom: -10px;
+  font-size: 25px;
 }
 
 /* Text */
@@ -932,24 +888,6 @@ de the hamburger on desktop --- */
   /* Header → Hamburger dropdown */
   .header-inner {
     justify-content: space-between;
-
-  }
-  .site-nav {
-    display: none;
-    width: 100%;
-    
-  
-  }
-  .site-nav.open {
-    display: block;
-  }
-  .site-nav ul {
-    flex-direction: column;
-    gap: 0.75rem;
-    padding: 1rem;
-  }
-  .menu-toggle {
-    display: block;
 
   }
 
