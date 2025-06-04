@@ -9,10 +9,12 @@ body {
     line-height: 1.7;
     margin: 15px;
     padding-top: 50px;
-   
-    
- 
   }
+
+   
+ 
+
+
 
   /* Remove the blue overlay on tap for all elements */
 * {
@@ -33,7 +35,7 @@ button:focus,
 
 
 @media (max-width: 768px) {
-  .body {
+  body {
     margin: 8px;
     padding-top: 50px ;
   }
@@ -64,9 +66,9 @@ de the hamburger on desktop --- */
 }
 
 /* ───────────────────────────────────────────────── */
-/* Mobile off-canvas nav (≤768px)                   */
+/* Mobile off-canvas nav (9px)                   */
 /* ───────────────────────────────────────────────── */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   /* Show the burger */
   .menu-toggle {
     display: block;
@@ -80,8 +82,8 @@ de the hamburger on desktop --- */
     right: 0;
     height: 100vh;
     width: 80%;                /* adjust to taste */
-    max-width: 300px;          /* optional cap */
-    background: #fff;
+    max-width: 200px;          /* optional cap */
+    background: #fffffff4;
     box-shadow: -2px 0 8px rgba(0,0,0,0.1);
     transform: translateX(100%);  /* start off-screen */
     transition: transform 0.3s ease-in-out;
@@ -89,6 +91,9 @@ de the hamburger on desktop --- */
     flex-direction: column;
     padding: 2rem 1rem;
     z-index: 1050;
+   padding-top: 120px;
+    text-align: center;
+  
   }
 
   /* Slide into view when .open is applied */
@@ -104,12 +109,15 @@ de the hamburger on desktop --- */
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    
   }
 
   .site-nav a {
     color: #000;
     text-decoration: none;
     font-weight: 500;
+    
+    
   }
 }
 
@@ -178,6 +186,7 @@ de the hamburger on desktop --- */
   background: transparent;
   z-index: 1000;
   margin-top: -30px;
+  
 }
 
 
@@ -195,12 +204,15 @@ de the hamburger on desktop --- */
   margin: 0;
   padding: 0;
  
+  
+ 
  
 }
 .site-nav a {
   text-decoration: none;
   color: #000000;
   font-weight: 500;
+  
 }
 
 
@@ -242,10 +254,14 @@ de the hamburger on desktop --- */
   justify-content: center;
 }
 .hero-logo img {
-  width: 500px;     
+  width: 700px;   
+  margin-top: 140px;
+  margin-left: -20px;
   height: auto;     
   display: block;
 }
+
+
 
 
 
@@ -259,6 +275,7 @@ de the hamburger on desktop --- */
   color: #ffffff;
   position: relative;
   top:15%; 
+  
 
 }
 
@@ -266,11 +283,12 @@ de the hamburger on desktop --- */
 
 @media (max-width:1048px) {
   .hero-content {
-    top:3%;
+    top:-6%;
+    
   }
 }
 
-.hero h1 { font-size: 50px; margin-bottom: 10px; }
+
 
 /* About */
 .about {
@@ -804,14 +822,205 @@ de the hamburger on desktop --- */
     
    
   }
+
+  /*gallery*/
+  body {
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.gallery-header {
+  text-align: center;
+  color: #000000;
+  font-size: 50px;
+  background: #7d9304;
+  border-radius: 8px;
+
+}
+
+
+
+.gallery-section {
+  display: block;
+  flex-direction: column;
+  
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+ 
+  
+  
+}
+
+.image-container img {
+  width: 100%;
+  height: 400px;
+  display: block;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  
+}
+
+.overlay {
+  position: absolute;
+  top:40%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  align-content: center;
+}
+
+.overlay h2 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.contact-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.contact-form {
+  width: 100%;
+  max-width: 550px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 30px;
+  background: #eadfdf;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color:#b3d200;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  opacity: 0.8;
+}
+
+
+.plant-hire-form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.plant-hire-form {
+  width: 100%;
+  max-width: 550px;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  padding: 30px;
+  background: #eadfdf;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  
+ 
+}
+
+.plant-hire-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.plant-hire-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.plant-hire-form input,
+.plant-hire-form select,
+.plant-hire-form textarea,
+.plant-hire-form button {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  font-size: 1rem;
+ 
+}
+
+.plant-hire-form button {
+  background-color:#b3d200;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.plant-hire-form button:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .contact-form,
+  .plant-hire-form {
+    padding: 20px;
+    margin: 30px;
+    margin-left: -12px;
+  }
+
+  .contact-form h2,
+  .plant-hire-form h2 {
+    font-size: 1.5rem;
+  }
+}
+
+
   
   
 
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .main-service-heading {
-    font-size: 40px;
+    font-size: 20px;
    
    
     
@@ -821,7 +1030,6 @@ de the hamburger on desktop --- */
     margin-top: -30px;
   }
 
- 
 
 
 
@@ -836,54 +1044,49 @@ de the hamburger on desktop --- */
 
 
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
 
   /* Header & Nav */
   .site-header {
     padding: 0.75rem 1rem;
   }
 
-  .hero-logo img {
-    margin-top: -60px;
-    
-  }
+  
   
   .menu-toggle {
     font-size: 1.75rem;
   }
 
- 
-    .hero-logo img {
-      width: 350px;
-      margin-left: -80px;
-      margin-top: -65px;
+  .hero-logo img {
+      width: 420px;
+      margin-left: -120px;
+      margin-top: 5px;
     }
 
+    .hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem); /* responsive scale */
+  line-height: 1.2;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  padding: 0 1rem;
+  text-align: center;}
     
-      
+
+     }
+
+     
+  .hero-logo img {
+      width: 380px;
+      margin-left: -130px;
+      margin-top: -30px;
+    }
+
+
     
-   
-   
-   
-  }
- 
-  
-   
-  
-
-  
-
- 
-
- 
-  
 
 
 
-/* ──────────────────────────────────────────────────────── */
-/* Mobile (up to 768px)                                   */
-/* ──────────────────────────────────────────────────────── */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
   /* Header → Hamburger dropdown */
   .header-inner {
@@ -891,27 +1094,34 @@ de the hamburger on desktop --- */
 
   }
 
-  .main-service-heading, h1 {
-    font-size: 35px;
+  .main-service-heading {
+    font-size: 40px;
     line-height: 50px;
-    margin-top: 5px;
+    margin-top: 30px;
     padding-left: 2px;
     padding-right: 2px;
+    
    
    
     
   }
 
+ 
+
+  
 
   /* Hero */
   .hero {
     height: 280px;
     border-radius: 6px;
   }
-  .hero h1 {
-    font-size: 40px;
-   
-    line-height: 1px;
+ .hero h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem); /* responsive scale */
+  line-height: 1.2;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  padding: 0 1rem;
+  text-align: center;
    
   }
   .hero-content {
@@ -922,7 +1132,9 @@ de the hamburger on desktop --- */
     
   }
 
-  .hero-services {
+  
+
+   .hero-services {
     height: 400px;
     border-radius: 6px;
   }
@@ -932,6 +1144,21 @@ de the hamburger on desktop --- */
   .about-feature {
     width: auto;
   }
+
+  .gallery-header {
+    font-size: 18px;
+   
+  }
+
+  
+  .hero-logo img {
+      width: 340px;
+      margin-left: -130px;
+      margin-top: -30px;
+    }
+
+
+
 
 
 
@@ -1011,10 +1238,16 @@ de the hamburger on desktop --- */
  }
 
   .hero-logo img {
-      width: 310px;
-      margin-left: -95px;
-      margin-top: -65px;
+      width: 340px;
+      margin-left: -140px;
+      margin-top: -40px;
     }
+
+    
+  .gallery-header {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
 
 
   

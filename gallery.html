@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+      <html lang="en">
+      <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Gallery</title>
+        <link rel="stylesheet" href="css/styles.css">
+      </head>
+      <body>
+
+
+
+      
+        <!-- Header / Nav -->
+        <header class="site-header">
+      
+          <button class="menu-toggle" aria-label="Open menu">
+            &#9776;
+          </button>
+
+          
+         
+          
+         <nav class="site-nav">
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="plant-hire.html">Plant Hire</a></li>
+                <li><a href="contact.html">Contact</a></li>
+              </ul>
+            </nav>
+          
+        </header>
+    
+        <!-- Hero -->
+        <div class="hero-wrapper">
+           <a href="index.html" class="hero-logo">
+        <img src="images/sg-logo.png" alt="GreenScape Logo">
+           </a>
+
+       
+           
+
+      </div>
+
+        
+       
+      
+      
+
+        <div class="gallery-section">
+          
+     <div class="image-container">
+      
+      <a href="gallery-landscaping.html">
+      <img src="images/landscaping-service-banner.png" alt="Landscaping">
+      <div class="overlay">
+        <h2>Landscaping</h2>
+      </div>
+    </div>
+    </a>
+
+    <div class="image-container">
+      <a href="gallery-groundworks.html">
+      <img src="images/service-garden.png" alt="Groundworks">
+      <div class="overlay">
+        <h2>Groundworks</h2>
+      </div>
+    </div>
+    </a>
+  </div>
+
+      
+
+          
+          
+        
+          
+        
+
+        
+       
+
+     
+</section>
+
+
+       <div class="bottom-text">
+        
+        <a href="contact.html" class="btn btn-primary">Contact Us</a>
+       </div>
+
+
+          <footer class="site-footer">
+          <div class="container footer-inner">
+            <div class="contact-info">
+              <span class="phone"><img src="images/phone.svg" alt="Phone"> 00000000000</span>
+              <span class="email"><img src="images/mail.svg" alt="Email"> youremail@domain.co.uk</span>
+            </div>
+          </div>
+        </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.menu-toggle');
+  const nav    = document.querySelector('.site-nav');
+
+  // Open/close menu on click
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    nav.classList.toggle('open');
+  });
+
+  // Close menu when clicking a link
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('open');
+    });
+  });
+
+  // Close if clicking outside
+  document.addEventListener('click', (e) => {
+    if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+      nav.classList.remove('open');
+    }
+  });
+});
+        </script>
+
+    </body>
+
+    </html>
