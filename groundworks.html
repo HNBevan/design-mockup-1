@@ -27,6 +27,19 @@
       <link rel="preload" as="image" href="images/service-garden.png" importance="high">
   <link rel="icon" href="images/favicon.png" type="image/png">
   <link rel="stylesheet" href="css/styles.css">
+   <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SG Landscaping & Groundworks",
+      "url": "https://www.sglandscaping.co.uk",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.sglandscaping.co.uk/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
 </head>
 
       <body>
@@ -190,13 +203,15 @@
   </div>
 </div>
 
-<script type="application/ld+json">
+ <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "SG Landscaping & Groundworks",
   "image": "https://www.sglandscaping.co.uk/images/sg-logo.png",
   "url": "https://www.sglandscaping.co.uk/groundworks.html",
+  "logo": "https://www.sglandscaping.co.uk/images/sg-logo.png",
+  "description": "SG Landscaping & Groundworks provides expert excavation, drainage, concrete foundations and other groundworks services across Kent. Trusted, local and fully equipped.",
   "telephone": "00000000000",
   "email": "youremail@domain.co.uk",
   "address": {
@@ -216,10 +231,45 @@
       "Sevenoaks"
     ]
   },
-  "description": "SG Landscaping & Groundworks provides expert excavation, drainage, concrete foundations and other groundworks services across Kent. Trusted, local and fully equipped.",
-  "sameAs": []
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Our Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Groundworks",
+          "description": "Excavation, site clearance, concrete foundations and drainage solutions across Kent."
+        }
+      }
+    ]
+  }
 }
 </script>
+
+<!-- BreadcrumbList schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.sglandscaping.co.uk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Groundworks",
+      "item": "https://www.sglandscaping.co.uk/groundworks.html"
+    }
+  ]
+}
+</script>
+
 
 
     </body>

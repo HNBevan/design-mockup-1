@@ -28,6 +28,20 @@
   <meta name="twitter:title" content="Landscaping Services in Kent | SG Landscaping & Groundworks">
   <meta name="twitter:description" content="Garden design, turfing, patios, and planting services across Kent. Covering Ashford, Medway, Maidstone, and more.">
   <meta name="twitter:image" content="https://www.yourdomain.co.uk/images/og-landscaping.jpg">
+
+   <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SG Landscaping & Groundworks",
+      "url": "https://www.sglandscaping.co.uk",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.sglandscaping.co.uk/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
 </head>
 
       <body>
@@ -192,11 +206,34 @@
   </div>
 </div>
 
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "SG Landscaping & Groundworks",
-  ...
+  "image": "https://www.yourdomain.co.uk/images/sg-logo.png",
+  "url": "https://www.yourdomain.co.uk/landscaping.html",
+  "logo": "https://www.yourdomain.co.uk/images/sg-logo.png",
+  "description": "Expert landscaping services across Kent. Garden design, turfing, patios, planting, and maintenance in Ashford, Folkestone, Maidstone, Medway and beyond.",
+  "telephone": "00000000000",
+  "email": "youremail@domain.co.uk",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Kent",
+    "addressCountry": "UK"
+  },
+  "areaServed": {
+    "@type": "Place",
+    "name": [
+      "Ashford",
+      "Folkestone",
+      "Maidstone",
+      "Canterbury",
+      "Medway",
+      "Tunbridge Wells",
+      "Sevenoaks"
+    ]
+  },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "Our Services",
@@ -208,18 +245,34 @@
           "name": "Landscaping",
           "description": "Garden design, turfing, patios, and planting services across Kent."
         }
-      },
-      {
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": "Groundworks",
-          "description": "Excavation, drainage, foundations, and site preparation."
-        }
       }
     ]
   }
 }
+</script>
+
+<!-- Breadcrumb schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.yourdomain.co.uk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Landscaping",
+      "item": "https://www.yourdomain.co.uk/landscaping.html"
+    }
+  ]
+}
+</script>
+
 
 
     </body>

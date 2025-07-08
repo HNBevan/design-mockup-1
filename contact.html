@@ -27,6 +27,19 @@
 
   <link rel="icon" href="images/favicon.png" type="image/png">
   <link rel="stylesheet" href="css/styles.css">
+   <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "SG Landscaping & Groundworks",
+      "url": "https://www.sglandscaping.co.uk",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.sglandscaping.co.uk/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  </script>
 </head>
 
       <body>
@@ -231,6 +244,7 @@
   </div>
 </div>
 
+ <!-- ContactPage Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -251,6 +265,29 @@
   }
 }
 </script>
+
+<!-- BreadcrumbList Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.sglandscaping.co.uk/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Contact",
+      "item": "https://www.sglandscaping.co.uk/contact.html"
+    }
+  ]
+}
+</script>
+
 
 
     </body>
