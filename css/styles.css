@@ -217,12 +217,8 @@ de the hamburger on desktop --- */
   font-weight: 500;
   
 }
-
-
-
-.hero {
- 
-    background-image: url("../images/Home-Banner.png");
+.hero{
+  background-image: url("../images/Home-Banner.png");
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -232,6 +228,8 @@ de the hamburger on desktop --- */
     
    
   }
+
+
   
 
 /* Hero */
