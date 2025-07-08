@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Header / Nav -->
+  <header class="site-header">
+    <button class="menu-toggle" aria-label="Open menu">&#9776;</button>
+    <nav class="site-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="plant-hire.html">Plant Hire</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <div class="hero-wrapper">
+    <a href="index.html" class="hero-logo">
+      <img src="images/sg-logo.png" alt="SG Landscaping Logo">
+    </a>
+ <section class="hero-section hero-privacy">
+  <img src="images/privacy-banner.png" alt="Privacy Policy Hero Banner" class="hero-image">
+
+  <div class="hero-content container">
+    <h1 class="main-service-heading">Privacy Policy</h1>
+    <h2>Your Data, Our Responsibility</h2>
+  </div>
+</section>
+
+
+
+  <!-- Privacy Content -->
+  <div class="about-text-services">
+    <h2 class="service-header">What Information We Collect</h2>
+    <p>We may collect your name, email, phone number, and enquiry details through our contact form. This information is used solely to respond to your queries and provide our services.</p>
+
+    <h2 class="service-header">How We Use Your Information</h2>
+    <p>Your data will only be used to contact you regarding your enquiry or to provide relevant services you have requested. We do not sell or share your data with third parties.</p>
+
+    <h2 class="service-header">Cookies</h2>
+    <p>We use basic cookies to improve your browsing experience and for essential website functionality. You may choose to disable cookies in your browser settings.</p>
+
+    <h2 class="service-header">Data Protection</h2>
+    <p>We take all reasonable steps to protect your data using secure hosting and encrypted contact form submissions where applicable.</p>
+
+    <h2 class="service-header">Your Rights</h2>
+    <p>You have the right to request access to your data, ask for corrections, or request deletion of your information at any time by contacting us.</p>
+
+    <h2 class="service-header">Contact</h2>
+    <p>If you have any questions about this privacy policy or how your data is handled, please contact us at: <strong>youremail@domain.co.uk</strong></p>
+
+    <p>Last updated: July 2025</p>
+  </div>
+
+  <!-- Footer CTA Buttons -->
+  <div class="bottom-text">
+    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="contact-info">
+        <span class="phone"><img src="images/phone.svg" alt="Phone"> 00000000000</span>
+        <span class="email"><img src="images/mail.svg" alt="Email"> youremail@domain.co.uk</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Burger Menu Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggle = document.querySelector('.menu-toggle');
+      const nav = document.querySelector('.site-nav');
+
+      toggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        nav.classList.toggle('open');
+      });
+
+      nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          nav.classList.remove('open');
+        });
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+          nav.classList.remove('open');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Gallery</title>
         <link rel="stylesheet" href="css/styles.css">
+        <!-- Lightbox2 CSS -->
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+
       </head>
       <body>
 
@@ -30,46 +33,76 @@
                 <li><a href="contact.html">Contact</a></li>
               </ul>
             </nav>
-          
+         
         </header>
-    
+      
         <!-- Hero -->
         <div class="hero-wrapper">
            <a href="index.html" class="hero-logo">
         <img src="images/sg-logo.png" alt="GreenScape Logo">
            </a>
 
-       
-           
+         <div> 
+        <h1 class="gallery-header">Landscaping</h1>
+      </div>
 
       </div>
 
-        
-       
       
       
-
-        <div class="gallery-section">
-          
-     <div class="image-container">
-      
-      <a href="gallery-landscaping.html">
-      <img src="images/landscaping-service-banner.png" alt="Landscaping">
-      <div class="overlay">
-        <h2>Landscaping</h2>
-      </div>
-    </div>
+<div class="gallery-wrapper container">
+  <div class="gallery-grid">
+    </a>
+        <a href="images/gallery-example.png" data-lightbox="landscaping-gallery">
+      <img src="images/gallery-example.png" alt="Landscaping Placeholder 1">
+    </a>
+    <a href="images/gallery-example.png" data-lightbox="landscaping-gallery">
+      <img src="images/gallery-example.png" alt="Landscaping Placeholder 2">
+    </a>
+    <a href="images/gallery-example.png" data-lightbox="landscaping-gallery">
+      <img src="images/gallery-example.png" alt="Landscaping Placeholder 3">
+    </a>
+        <a href="images/gallery-example.png" data-lightbox="landscaping-gallery">
+      <img src="images/gallery-example.png" alt="Landscaping Placeholder 1">
+    </a>
+    <a href="images/gallery-example.png" data-lightbox="landscaping-gallery">
+      <img src="images/gallery-example.png" alt="Landscaping Placeholder 2">
+    </a>
+    <a href="images/gallery-example.png" data-lightbox="landscaping-gallery">
+      <img src="images/gallery-example.png" alt="Landscaping Placeholder 3">
+    </a>
+        <a href="images/gallery-example.png" data-lightbox="landscaping-gallery">
+      <img src="images/gallery-example.png" alt="Landscaping Placeholder 1">
+    </a>
+    <a href="images/gallery-example.png" data-lightbox="landscaping-gallery">
+      <img src="images/gallery-example.png" alt="Landscaping Placeholder 2">
+    </a>
+    <a href="images/gallery-example.png" data-lightbox="landscaping-gallery">
+      <img src="images/gallery-example.png" alt="Landscaping Placeholder 3">
     </a>
 
-    <div class="image-container">
-      <a href="gallery-groundworks.html">
-      <img src="images/service-garden.png" alt="Groundworks">
-      <div class="overlay">
-        <h2>Groundworks</h2>
-      </div>
-    </div>
+    <a href="images/gallery-example.png" data-lightbox="landscaping-gallery">
+      <img src="images/gallery-example.png" alt="Landscaping Placeholder 2">
     </a>
+    <a href="images/gallery-example.png" data-lightbox="landscaping-gallery">
+      <img src="images/gallery-example.png" alt="Landscaping Placeholder 3">
+      
+       <a href="images/gallery-example.png" data-lightbox="landscaping-gallery">
+      <img src="images/gallery-example.png" alt="Landscaping Placeholder 2">
+    </a>
+    <a href="images/gallery-example.png" data-lightbox="landscaping-gallery">
+      <img src="images/gallery-example.png" alt="Landscaping Placeholder 3">
+    </a>
+
+    <a href="images/gallery-example.png" data-lightbox="landscaping-gallery">
+      <img src="images/gallery-example.png" alt="Landscaping Placeholder 2">
+    </a>
+    <a href="images/gallery-example.png" data-lightbox="landscaping-gallery">
+      <img src="images/gallery-example.png" alt="Landscaping Placeholder 3">
   </div>
+</div>
+
+  
 
       
 
@@ -88,7 +121,7 @@
 
        <div class="bottom-text">
         
-        <a href="contact.html" class="btn btn-primary">Contact Us</a>
+        <a href="#contact" class="btn btn-primary">Contact Us</a>
        </div>
 
 
@@ -127,6 +160,50 @@
   });
 });
         </script>
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const banner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("accept-cookies");
+    const declineBtn = document.getElementById("decline-cookies");
+
+    if (!localStorage.getItem("cookies-preference")) {
+      banner.classList.add("show");
+    }
+
+    acceptBtn.addEventListener("click", () => {
+      localStorage.setItem("cookies-preference", "accepted");
+      banner.classList.remove("show");
+    });
+
+    declineBtn.addEventListener("click", () => {
+      localStorage.setItem("cookies-preference", "declined");
+      banner.classList.remove("show");
+    });
+  });
+
+</script>
+
+
+
+
+
+
+   
+<div id="cookie-banner" class="cookie-banner">
+  <p>
+    This website uses cookies to enhance the browsing experience. 
+    <a href="privacy-policy.html" class="cookie-link">Learn more</a>
+  </p>
+  <div class="cookie-buttons">
+    <button id="accept-cookies" class="btn btn-primary">Accept</button>
+    <button id="decline-cookies" class="btn btn-secondary">Decline</button>
+  </div>
+</div>
+
+<!-- Lightbox2 JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+
 
     </body>
 

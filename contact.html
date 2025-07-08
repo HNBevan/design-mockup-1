@@ -39,31 +39,63 @@
         <img src="images/sg-logo.png" alt="GreenScape Logo">
            </a>
 
-     
+       
 
       </div>
 
-      <div class="contact-wrapper">
-  <div class="contact-form">
-    <h2>General Enquiry</h2>
-    <form action="mailto:your@email.com" method="POST" enctype="text/plain">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required />
+      <div class="plant-hire-form-wrapper">
+  <div class="plant-hire-form">
+    <h1 class="contact-us-heading">Contact Us</h1>
+   <form id="enquiryForm" action="mailto:youremail@domain.com" method="POST" enctype="text/plain">
 
-      <label for="number">Phone Number</label>
-      <input type="tel" id="number" name="number" />
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" required>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
+  <label for="phone">Phone Number</label>
+  <input type="tel" id="phone" name="phone">
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+  <label for="email">Email</label>
+  <input type="email" id="email" name="email" required>
 
-      <button class="contact-btn" type="submit">Send Message</button>
-      
-    </form>
+  <label for="service">Type of Service</label>
+  <select id="service" name="service" required>
+    <option value="">-- Please choose --</option>
+    <option value="Landscaping & Groundworks">Landscaping & Groundworks</option>
+    <option value="Plant Hire">Plant Hire</option>
+  </select>
+
+  <div id="plantOptions" style="display: none;">
+    <label for="equipment">Choose Equipment</label>
+    <select id="equipment" name="equipment">
+      <option value="">-- Choose Equipment --</option>
+      <option value="Digger">Digger</option>
+      <option value="Dumper">Dumper</option>
+    </select>
+
+    <label for="operator">Operator Needed?</label>
+    <select id="operator" name="operator">
+      <option value="">-- Choose Option --</option>
+      <option value="With Operator">With Operator</option>
+      <option value="No Operator">No Operator</option>
+    </select>
+
+    <label for="duration">Hire Duration</label>
+    <select id="duration" name="duration">
+      <option value="">-- Choose Duration --</option>
+      <option value="Short Term">Short Term</option>
+      <option value="Long Term">Long Term</option>
+    </select>
+  </div>
+
+  <label for="message">Message</label>
+  <textarea id="message" name="message" rows="5" required></textarea>
+
+  <button type="submit">Send Enquiry</button>
+</form>
+
   </div>
 </div>
+
 
       
 
@@ -82,7 +114,7 @@
        
 
      
-</section>
+
 
 
 
@@ -121,7 +153,60 @@
     }
   });
 });
+
+ document.addEventListener('DOMContentLoaded', () => {
+    const serviceSelect = document.getElementById('service');
+    const plantOptions = document.getElementById('plantOptions');
+
+    serviceSelect.addEventListener('change', () => {
+      if (serviceSelect.value === 'Plant Hire') {
+        plantOptions.style.display = 'block';
+      } else {
+        plantOptions.style.display = 'none';
+      }
+    });
+  });
         </script>
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const banner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("accept-cookies");
+    const declineBtn = document.getElementById("decline-cookies");
+
+    if (!localStorage.getItem("cookies-preference")) {
+      banner.classList.add("show");
+    }
+
+    acceptBtn.addEventListener("click", () => {
+      localStorage.setItem("cookies-preference", "accepted");
+      banner.classList.remove("show");
+    });
+
+    declineBtn.addEventListener("click", () => {
+      localStorage.setItem("cookies-preference", "declined");
+      banner.classList.remove("show");
+    });
+  });
+
+</script>
+
+
+
+
+
+
+   
+<div id="cookie-banner" class="cookie-banner">
+  <p>
+    This website uses cookies to enhance the browsing experience. 
+    <a href="privacy-policy.html" class="cookie-link">Learn more</a>
+  </p>
+  <div class="cookie-buttons">
+    <button id="accept-cookies" class="btn btn-primary">Accept</button>
+    <button id="decline-cookies" class="btn btn-secondary">Decline</button>
+  </div>
+</div>
 
     </body>
 

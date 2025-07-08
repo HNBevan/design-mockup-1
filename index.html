@@ -50,7 +50,7 @@
           <div class="hero-content container">
             <h1 class="main-service-heading">SG Landscaping </h1>
             <h2>Landscaping &amp; Groundwork Services in Kent</h2>
-            <a href="#contact" class="btn-btn-primary">Get in Touch</a>
+            <a href="contact.html" class="btn-btn-primary">Get in Touch</a>
           </div>
         </section>
       
@@ -60,8 +60,8 @@
         
            
           <div class="about-text">
-            <h1>About us</h1>
-            <p>We’re a full service landscaping and groundworks company, dedicated to creating beautiful, 
+            <h2>About us</h2>
+            <p class="about-us-content">We’re a full service landscaping and groundworks company, dedicated to creating beautiful, 
               functional outdoor spaces for both residential and commercial clients. From garden design and planting, paving to driveways, 
               drainage, and site preparation, our experienced team handles every project with precision and care. To make earthmoving easier, 
               we also offer digger and dumper hire from our modern, well maintained fleet perfect for DIY enthusiasts and trade professionals alike. 
@@ -75,7 +75,8 @@
           >
             <div class="feature-overlay">
               <h3 class="plant-hire-header">Plant Hire</h3>
-              <a href="plant-hire.html" class="btn">Enquire Here</a>
+             
+              <a href="plant-hire.html" class="btn">Find Out More</a>
             </div>
           </div>
         
@@ -154,7 +155,7 @@
 
 
        <div class="bottom-text">
-        <h1>and all general garden work...</h1>
+        <h2>and all general garden work...</h2>
         <p>Any quesions or for a free no obligation quote, please don't hesistate to get in touch.</p>
         <a href="contact.html" class="btn btn-primary">Contact Us</a>
        </div>
@@ -172,14 +173,25 @@
       
         
        
-        <footer class="site-footer">
-          <div class="container footer-inner">
-            <div class="contact-info">
-              <span class="phone"><img src="images/phone.svg" alt="Phone"> 00000000000</span>
-              <span class="email"><img src="images/mail.svg" alt="Email"> youremail@domain.co.uk</span>
-            </div>
-          </div>
-        </footer>
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="contact-info">
+      <div class="footer-line">
+        <img src="images/phone.svg" alt="Phone">
+        <a href="tel:00000000000">00000000000</a>
+      </div>
+      <div class="footer-line">
+        <img src="images/mail.svg" alt="Email">
+        <a href="mailto:youremail@domain.co.uk">youremail@domain.co.uk</a>
+      </div>
+      <div class="footer-line">
+        <a href="privacy-policy.html">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
        
      
       <script>
@@ -256,6 +268,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const banner = document.getElementById("cookie-banner");
+    const acceptBtn = document.getElementById("accept-cookies");
+    const declineBtn = document.getElementById("decline-cookies");
+
+    if (!localStorage.getItem("cookies-preference")) {
+      banner.classList.add("show");
+    }
+
+    acceptBtn.addEventListener("click", () => {
+      localStorage.setItem("cookies-preference", "accepted");
+      banner.classList.remove("show");
+    });
+
+    declineBtn.addEventListener("click", () => {
+      localStorage.setItem("cookies-preference", "declined");
+      banner.classList.remove("show");
+    });
+  });
+
 </script>
 
 
@@ -264,6 +297,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
    
+<div id="cookie-banner" class="cookie-banner">
+  <p>
+    This website uses cookies to enhance the browsing experience. 
+    <a href="privacy-policy.html" class="cookie-link">Learn more</a>
+  </p>
+  <div class="cookie-buttons">
+    <button id="accept-cookies" class="btn btn-primary">Accept</button>
+    <button id="decline-cookies" class="btn btn-secondary">Decline</button>
+  </div>
+</div>
+
 
 
 </body>

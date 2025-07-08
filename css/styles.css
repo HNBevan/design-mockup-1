@@ -154,16 +154,19 @@ de the hamburger on desktop --- */
   text-decoration: none;
   text-align: center;
   font-weight: bold;
+  
+  
 }
 .btn-primary {
   background: #b3d200; 
   color: #111;
+  
 }
 
 .btn-btn-primary {
   background: #b3d200; 
   color: #111;
-   display: inline-block;
+  display: inline-block;
   padding: 10px 20px;
   border-radius: 8px;
   text-decoration: none;
@@ -241,7 +244,7 @@ de the hamburger on desktop --- */
 
 .hero-logo {
   position: absolute;
-  top: -10px;
+  top: 20px;
   left: 80px;
   width: 80px;
   height: 80px;
@@ -318,6 +321,12 @@ de the hamburger on desktop --- */
   border-radius: 8px;
   width: 500px;
   text-align: center;
+  
+  
+}
+
+.about-us-content {
+  font-size: 16px;
 }
 
 .about-feature {
@@ -503,7 +512,7 @@ de the hamburger on desktop --- */
   }
 
   .service-text {
-    font-size: 12px;
+    font-size: 16px;
     
 
  }
@@ -541,7 +550,7 @@ de the hamburger on desktop --- */
 }
 
 .service-text {
-  font-size: 15px;
+  font-size: 16px;
   margin: 8px;
   padding: 10px;
  
@@ -621,10 +630,11 @@ de the hamburger on desktop --- */
 
 /* Text */
 .service-item .service-text {
-  font-size: 0.9rem;
+  font-size: 16px;
   line-height: 1.4;
   text-align: center;
   margin: 0;
+  
 }
 
 
@@ -702,6 +712,14 @@ de the hamburger on desktop --- */
   margin: 20px;
   border-radius: 8px;
   object-fit: cover;
+}
+.service-item .service-text {
+  font-size: 16px;
+  line-height: 1.4;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  
 }
 }
 
@@ -937,6 +955,9 @@ de the hamburger on desktop --- */
   opacity: 0.8;
 }
 
+.contact-us-heading {
+  text-align: center;
+}
 
 .plant-hire-form-wrapper {
   display: flex;
@@ -949,10 +970,11 @@ de the hamburger on desktop --- */
 .plant-hire-form {
   width: 100%;
   max-width: 550px;
-  border: 1px solid #000000;
+  border: 1px solid #ffffff;
   border-radius: 10px;
   padding: 30px;
-  background: #eadfdf;
+  background: hsl(69, 94%, 27%); 
+  color: #ffffff; ;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
   
@@ -1146,9 +1168,14 @@ de the hamburger on desktop --- */
   }
 
   .gallery-header {
-    font-size: 18px;
+    font-size: 16px;
+    margin-left:60px;
+
+
    
   }
+
+ 
 
   
   .hero-logo img {
@@ -1256,3 +1283,145 @@ de the hamburger on desktop --- */
   
 }
 
+.hero-privacy {
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-privacy .hero-image {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.hero-privacy .hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4); /* Optional overlay */
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .hero-privacy .hero-content {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4); /* Optional overlay */
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+}
+
+.gallery-wrapper {
+  padding: 2rem 1rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 3fr));
+  gap: 10px;
+  
+}
+
+  @media (max-width: 600px) {
+  .gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 3fr));
+  gap: 5px;
+}
+  }
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid a:hover img {
+  transform: scale(1.03);
+}
+
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #0d0d0deb;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+  z-index: 9999;
+  font-size: 0.95rem;
+ 
+}
+
+.cookie-banner.show {
+  transform: translateY(0);
+}
+
+.cookie-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.cookie-banner .btn {
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cookie-banner .btn-primary {
+  background-color: #b3d200;
+  color: rgb(0, 0, 0);
+}
+
+.cookie-banner .btn-secondary {
+  background-color: #cccccc;
+  color: black;
+}
+
+.cookie-link {
+  color: #b3d200;
+  text-decoration: underline;
+  margin-left: 5px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.footer-line {
+  color: white;
+  text-align: center;
+}
+
+.footer-line a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.footer-line a:hover {
+  color: #a8e6a3;
+}
